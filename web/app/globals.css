@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg-primary: #f7f7f8;
+  --color-bg-secondary: #f0f0f2;
+  --color-bg-tertiary: #e8e8ea;
+  --color-bg-elevated: #ffffff;
+  --color-bg-hover: #e3e3e5;
+  --color-text-primary: #141416;
+  --color-text-secondary: #525256;
+  --color-text-tertiary: #a0a0a6;
+  --color-text-quaternary: #d0d0d4;
+  --color-border-primary: #e4e4e7;
+  --color-border-secondary: #d4d4d8;
+  --color-accent: #141416;
+  --color-accent-hover: #3a3a40;
+  --color-accent-soft: #e8e8ea;
+  --color-accent-glow: #141416;
+  --color-status-ontime: #16a34a;
+  --color-status-delayed: #dc2626;
+  --color-status-cancelled: #a3a3a6;
+  --color-status-info: #2563eb;
+  --color-gradient-start: #f7f7f8;
+  --color-gradient-mid: #f0f0f2;
+  --color-gradient-end: #ebebed;
+  --color-accent-gradient-1: #141416;
+  --color-accent-gradient-2: #2d2d33;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 0 0 1px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 16px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04);
+  --shadow-elevated: 0 8px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+  --shadow-modal: 0 24px 64px rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.04);
+  --shadow-live-card: 0 2px 8px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04);
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+}
+
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.35s ease-out both;
+}
+
+.animate-fade-in-up-1 { animation-delay: 50ms; }
+.animate-fade-in-up-2 { animation-delay: 100ms; }
+.animate-fade-in-up-3 { animation-delay: 150ms; }
+.animate-fade-in-up-4 { animation-delay: 200ms; }
+.animate-fade-in-up-5 { animation-delay: 250ms; }
+.animate-fade-in-up-6 { animation-delay: 300ms; }
+.animate-fade-in-up-7 { animation-delay: 350ms; }
+.animate-fade-in-up-8 { animation-delay: 400ms; }

@@ -1,6 +1,9 @@
 import json
 import os
+import sys
 import time
+from datetime import datetime
+
 import requests
 from typing import Any, Optional
 
@@ -106,6 +109,9 @@ class NTESClient:
             f"service=TrainRunningMob&subService=TrainExcpInfo&trainNo={train_no}"
         )
 
+    def health(self):
+        return {"status": "ok", "timestamp": datetime.utcnow().isoformat()}
+
     def pnr_status(self, pnr: str):
         from .pnr import _solve
 
@@ -175,3 +181,9 @@ class NTESClient:
                 continue
 
         raise NTESError("pnr check failed after retries")
+
+
+if __name__ == "__main__":
+    client = NTESClient()
+    if len(sys.argv) > 1 and sys.argv[1] == "health":
+        print(json.dumps(client.health()))
